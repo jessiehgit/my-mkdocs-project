@@ -1,0 +1,113 @@
+site_name: My Test Project
+docs_dir: docs/en
+site_url: https://jessiehgit.github.io/my-mkdocs-project/en/
+site_dir: site/en
+theme:
+  name: material
+  favicon: img/e.ico
+  logo: img/e.png
+  language: en
+  custom_dir: overrides
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red  
+      accent: yellow
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: grey
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode   
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - navigation.indexes
+  font:
+    text: Ubuntu
+    code: Work Sans
+
+nav:
+  - HomePage: index.md
+  - Elastic Training Cluster: 
+    - ethpc/index.md
+    - Creating Elastic Training Clusters: ethpc/creating.md
+    - Elastic Training Cluster List: ethpc/etlist.md
+  - Click: test.md
+
+extra:
+  alternate:
+    - name: 繁體中文
+      link: /my-mkdocs-project/zh-tw/
+      lang: zh-tw
+    - name: English
+      link: /my-mkdocs-project/en/
+      lang: en
+  version:
+    provider: mike
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.critic
+
+plugins:
+  - with-pdf:
+      author: tester
+      copyright: ©Testsite 2884 copyright
+      cover: true
+      cover_title: My testtt site 
+      cover_subtitle: the greatest subtitle ever
+      cover_logo: img/cbg.png
+      back_cover: true 
+      toc_title: Table of Contents
+      heading_shift: true
+      toc_level: 3
+      ordered_chapter_level: 3
+      custom_template_path: templates
+      output_path: pdf/mkdocs-en.pdf
+      verbose: true        
+      debug_html: true
+  - mike:
+      alias_type: redirect
+      version_selector: true

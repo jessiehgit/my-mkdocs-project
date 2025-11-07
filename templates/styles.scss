@@ -1,0 +1,507 @@
+@media print {
+  /* ========== 基本字型設定 ========== */
+  body {
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+    font-size: 12pt;              /* 內文字體大小 */
+    line-height: 1.6;             /* 行高 */
+    color: #333333;               /* 文字顏色 */
+  }
+
+  /* ========== 段落設定 ========== */
+  p {
+    margin: 0.8em 0;              /* 段落間距 */
+    text-align: justify;
+    font-size: 12pt;          /* 兩端對齊 */
+  }
+
+  /* ========== 標題設定 ========== */
+  h1 {
+    font-size: 24pt;              /* 一級標題 */
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    page-break-after: avoid;      /* 避免標題後分頁 */
+  }
+
+  h2 {
+    font-size: 18pt;              /* 二級標題 */
+    font-weight: 600;
+    color: #2a2a2a;
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt;              /* 三級標題 */
+    font-weight: 600;
+    color: #3a3a3a;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    font-size: 12pt;              /* 四級標題 */
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+  }
+
+  h5, h6 {
+    font-size: 11pt;              /* 五、六級標題 */
+    font-weight: 600;
+    color: #5a5a5a;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
+  }
+
+  /* ========== 清單設定 ========== */
+  ul, ol {
+    margin: 0.8em 0;
+    padding-left: 2em;
+    font-size: 12pt;
+  }
+
+  li {
+    margin: 0.3em 0;
+    line-height: 1.5;
+    font-size: 12pt;
+  }
+
+  /* ========== 代碼區塊 ========== */
+  code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 12pt;              /* 行內代碼字體大小 */
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+
+  pre {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 12pt;               /* 代碼區塊字體大小 */
+    line-height: 1.4;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1em;
+    margin: 1em 0;
+    overflow-x: auto;
+    page-break-inside: avoid;     /* 避免代碼區塊內分頁 */
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  /* ========== 表格設定 ========== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 12pt;              /* 表格字體大小 */
+  }
+
+  th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 12pt;
+  }
+
+  td {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    font-size: 12pt;
+  }
+
+  /* ========== 引用區塊 ========== */
+  blockquote {
+    margin: 1em 0;
+    padding: 0.8em 1em;
+    border-left: 4px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 12pt;
+    font-style: italic;
+    color: #666;
+  }
+
+  /* ========== 連結設定 ========== */
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* ========== 圖片設定 ========== */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+    page-break-inside: avoid;     /* 避免圖片內分頁 */
+  }
+
+  /* ========== 水平線 ========== */
+  hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 2em 0;
+  }
+
+  /* ========================================
+   目錄頁設定
+   ======================================== */
+
+article#doc-toc {
+  h1 {
+    font-size: 20pt;
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin: 0.5em 0;
+    font-size: 12pt;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* 目錄層級縮排 */
+  ul ul {
+    padding-left: 1.5em;
+  }
+}
+
+  /* ========================================
+   分頁控制
+   ======================================== */
+
+  /* 標題前強制分頁 */
+  h1 {
+    page-break-before: always;      /* 每個 h1 前分頁 */
+  }
+
+  h1:first-of-type {
+    page-break-before: avoid;       /* 第一個 h1 不分頁 */
+  }
+
+  /* 避免孤行 */
+  p, li {
+    orphans: 3;                     /* 頁底至少 3 行 */
+    widows: 3;                      /* 頁首至少 3 行 */
+  }
+  
+/* ==========================================
+   Admonition 圖示修正（Emoji 放前面）
+   ========================================== */
+
+  /* 隱藏所有原始圖示 */
+  .md-typeset .admonition > .admonition-title::before,
+  .md-typeset details.admonition > summary::before,
+  .admonition-title::before,
+  .admonition > .admonition-title::before,
+  .admonition-title > *:first-child,
+  .md-typeset .admonition-title > .admonition-icon,
+  svg.admonition-icon {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  /* 移除 ::after（如果有的話）*/
+  .md-typeset .admonition > .admonition-title::after,
+  .md-typeset details.admonition > summary::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  /* 用 ::before 在標題前面加 Emoji */
+  
+  /* Note */
+  .md-typeset .admonition.note > .admonition-title::before,
+  .md-typeset details.admonition.note > summary::before {
+    content: "📝 " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Abstract */
+  .md-typeset .admonition.abstract > .admonition-title::before,
+  .md-typeset details.admonition.abstract > summary::before {
+    content: "📚 " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Info */
+  .md-typeset .admonition.info > .admonition-title::before,
+  .md-typeset details.admonition.info > summary::before {
+    content: "ℹ️ " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Tip */
+  .md-typeset .admonition.tip > .admonition-title::before,
+  .md-typeset .admonition.hint > .admonition-title::before,
+  .md-typeset details.admonition.tip > summary::before {
+    content: "📢 " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Success */
+  .md-typeset .admonition.success > .admonition-title::before,
+  .md-typeset .admonition.check > .admonition-title::before,
+  .md-typeset details.admonition.success > summary::before {
+    content: "✅ " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Question */
+  .md-typeset .admonition.question > .admonition-title::before,
+  .md-typeset .admonition.help > .admonition-title::before,
+  .md-typeset details.admonition.question > summary::before {
+    content: "❓ " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Warning */
+  .md-typeset .admonition.warning > .admonition-title::before,
+  .md-typeset .admonition.caution > .admonition-title::before,
+  .md-typeset details.admonition.warning > summary::before {
+    content: "⚠️ " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Failure */
+  .md-typeset .admonition.failure > .admonition-title::before,
+  .md-typeset .admonition.fail > .admonition-title::before,
+  .md-typeset details.admonition.failure > summary::before {
+    content: "💣 " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Danger */
+  .md-typeset .admonition.danger > .admonition-title::before,
+  .md-typeset .admonition.error > .admonition-title::before,
+  .md-typeset details.admonition.danger > summary::before {
+    content: "☠️ " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Bug */
+  .md-typeset .admonition.bug > .admonition-title::before,
+  .md-typeset details.admonition.bug > summary::before {
+    content: "🤖 " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Example */
+  .md-typeset .admonition.example > .admonition-title::before,
+  .md-typeset details.admonition.example > summary::before {
+    content: "🧪 " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* Quote */
+  .md-typeset .admonition.quote > .admonition-title::before,
+  .md-typeset .admonition.cite > .admonition-title::before,
+  .md-typeset details.admonition.quote > summary::before {
+    content: "💬 " !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    visibility: visible !important;
+  }
+  
+  /* ==========================================
+     Checkbox 完全修正
+     ========================================== */
+  
+  /* 超強力隱藏所有原始 checkbox 元素 */
+  .task-list-item > input[type="checkbox"],
+  .task-list-item input[type="checkbox"],
+  .task-list-control,
+  .task-list-indicator,
+  .md-typeset .task-list-item > input[type="checkbox"],
+  .md-typeset .task-list-control,
+  .md-typeset .task-list-indicator,
+  input[type="checkbox"].task-list-item-checkbox,
+  .task-list-item > label > input[type="checkbox"],
+  .task-list-item label input[type="checkbox"] {
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* 隱藏所有可能的 checkbox 圖示容器 */
+  .task-list-item > *:first-child:not(p):not(label),
+  .task-list-indicator::before,
+  .task-list-indicator::after {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Task List 基本樣式 */
+  ul.task-list,
+  ul.contains-task-list,
+  .md-typeset ul.task-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+  }
+  
+  /* Task List Item */
+  .task-list-item,
+  li.task-list-item,
+  .md-typeset .task-list-item {
+    list-style: none !important;
+    padding-left: 2em !important;
+    margin: 0.4em 0 !important;
+    position: relative !important;
+  }
+  
+  /* 未勾選 Checkbox */
+  .task-list-item::before,
+  .md-typeset .task-list-item::before {
+    content: "☐ " !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+    font-size: 1em !important;
+    color: #666 !important;
+    display: inline-block !important;
+    visibility: visible !important;
+  }
+  
+  /* 已勾選 Checkbox - 多種選擇器確保覆蓋 */
+  .task-list-item[data-checked]::before,
+  .task-list-item.checked::before,
+  li[data-task="x"]::before,
+  li[data-task="X"]::before,
+  .md-typeset .task-list-item[data-checked]::before,
+  .md-typeset li[data-task="x"]::before,
+  .md-typeset li[data-task="X"]::before,
+  .task-list-item:has(> input[type="checkbox"]:checked)::before,
+  .md-typeset .task-list-item:has(> input[type="checkbox"]:checked)::before {
+    content: "☑ " !important;
+    color: #4caf50 !important;
+  }
+  
+  /* 已完成項目的文字樣式 */
+  .task-list-item[data-checked],
+  li[data-task="x"],
+  li[data-task="X"],
+  .md-typeset li[data-task="x"],
+  .task-list-item:has(> input[type="checkbox"]:checked),
+  .md-typeset .task-list-item:has(> input[type="checkbox"]:checked) {
+    color: #999 !important;
+    text-decoration: line-through !important;
+  }
+}
+
+
+/* ========================================
+   頁面設定
+   ======================================== */
+
+@page {
+  size: A4;                       /* 頁面大小 */
+  margin: 20mm 15mm;              /* 上下 20mm，左右 15mm */
+
+  /* 頁眉 */
+  @top-right {
+    content: string(heading);     /* 顯示當前標題 */
+    font-size: 11pt;
+    color: #666;
+  }
+
+  /* 頁碼 */
+  @bottom-center {
+    content: counter(page);       /* 顯示頁碼 */
+    font-size: 11pt;
+    color: #666;
+  }
+
+  /* 版權資訊 */
+  @bottom-right {
+    content: "test© 2025";
+    font-size: 11pt;
+    color: #999;
+  }
+}
+
+/* 第一頁（封面）不顯示頁眉頁腳 */
+@page :first {
+  @top-right {
+    content: normal;
+  }
+  @bottom-center {
+    content: normal;
+  }
+  @bottom-right {
+    content: normal;
+  }
+}
+
+
+
+
+
+

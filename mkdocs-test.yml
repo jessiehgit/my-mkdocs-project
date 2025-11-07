@@ -1,0 +1,25 @@
+site_name: 測試網站
+docs_dir: docs/zh-tw
+site_dir: site/zh-tw
+
+theme:
+  name: material
+
+plugins:
+  - with-pdf:
+      # === 封面設定 ===
+      cover: true
+      cover_title: 測試網站
+      cover_subtitle: 這是副標題
+      cover_logo: img/cbg.png
+      
+      # === 作者資訊 ===
+      author: 測試作者
+      copyright: ©2025 版權所有
+      
+      # === 指定自訂模板資料夾 ===
+      custom_template_path: templates
+      
+      # === 輸出設定 ===
+      output_path: pdf/test.pdf
+      verbose: true

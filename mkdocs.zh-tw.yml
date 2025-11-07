@@ -1,0 +1,127 @@
+site_name: 測試網站
+docs_dir: docs/zh-tw
+site_url: https://jessiehgit.github.io/my-mkdocs-project/zh-tw/
+site_dir: site/zh-tw
+theme:
+  name: material
+  favicon: img/kitty.ico
+  logo: img/kitty.png
+  language: zh-TW
+  custom_dir: overrides
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: brown  
+      accent: yellow
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: grey
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode   
+  features:
+    - navigation.instant
+    - navigation.instant.progress  
+    - navigation.top
+    - navigation.indexes
+  font:
+    text: Ubuntu
+    code: Work Sans
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+
+nav:
+  - 首頁: index.md
+  - 分佈式訓練叢集: 
+    - ethpc/index.md
+    - 建立分佈式訓練叢集: ethpc/creating.md
+    - 分佈式訓練叢集列表: ethpc/etlist.md
+  - 點看看: test.md
+
+extra:
+  alternate:
+    - name: 繁體中文
+      link: /my-mkdocs-project/zh-tw/
+      lang: zh-tw
+    - name: English
+      link: /my-mkdocs-project/en/
+      lang: en
+  version:
+    provider: mike
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.critic
+
+plugins:
+  - with-pdf:
+      author: 測試者
+      copyright: ©Testsite 2884 版權所有
+      cover: true
+      cover_title: 測試網站
+      cover_subtitle: 史上最棒的副標
+      cover_logo: img/cbg.png
+      back_cover: true
+      toc_title: 目錄
+      heading_shift: true
+      toc_level: 3
+      ordered_chapter_level: 3
+      custom_template_path: templates
+      output_path: pdf/mkdocs-tw.pdf
+      verbose: true        
+      debug_html: true
+  - mike:
+     alias_type: redirect
+     version_selector: true
