@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh-TW" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://jessiehgit.github.io/my-mkdocs-project/zh-tw/1.0/ethpc/creating/">
+        <link rel="canonical" href="https://jessiehgit.github.io/my-mkdocs-project/en/1.0/ethpc/creating/">
       
       
         <link rel="prev" href="../">
@@ -17,12 +17,12 @@
         <link rel="next" href="../etlist/">
       
       
-      <link rel="icon" href="../../img/kitty.ico">
+      <link rel="icon" href="../../img/e.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>建立分佈式訓練叢集 - 測試網站</title>
+        <title>Creating Elastic Training Clusters - My Test Project</title>
       
     
     
@@ -32,71 +32,6 @@
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
-  
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-  
-  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
-
 
 
     
@@ -130,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="yellow">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="yellow">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -139,8 +74,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
-          跳轉到
+        <a href="#before-you-begin" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -158,10 +93,10 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="頁首">
-    <a href="../.." title="測試網站" class="md-header__button md-logo" aria-label="測試網站" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Test Project" class="md-header__button md-logo" aria-label="My Test Project" data-md-component="logo">
       
-  <img src="../../img/kitty.png" alt="logo">
+  <img src="../../img/e.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -172,13 +107,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            測試網站
+            My Test Project
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              建立分佈式訓練叢集
+              Creating Elastic Training Clusters
             
           </span>
         </div>
@@ -191,7 +126,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -218,7 +153,7 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="選擇語言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
@@ -266,14 +201,14 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="測試網站" class="md-nav__button md-logo" aria-label="測試網站" data-md-component="logo">
+    <a href="../.." title="My Test Project" class="md-nav__button md-logo" aria-label="My Test Project" data-md-component="logo">
       
-  <img src="../../img/kitty.png" alt="logo">
+  <img src="../../img/e.png" alt="logo">
 
     </a>
-    測試網站
+    My Test Project
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -292,7 +227,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160.5-26.4c9.3-7.8 23-7.5 31.9.9 12.3 11.6 23.3 24.4 33.9 37.4 13.5 16.5 29.7 38.3 45.3 64.2 5.2-6.8 10-12.8 14.2-17.9 1.1-1.3 2.2-2.7 3.3-4.1C297 44.3 306.8 32 319.9 32c13.4 0 22.8 11.9 30.8 22.1q1.95 2.55 3.9 4.8c10.3 12.4 24 30.3 37.7 52.4 27.2 43.9 55.6 106.4 55.6 176.6 0 123.7-100.3 224-224 224S0 411.7 0 288c0-91.1 41.1-170 80.5-225 19.9-27.7 39.7-49.9 54.6-65.1 8.2-8.4 16.5-16.7 25.5-24.2zM225.7 416c25.3 0 47.7-7 68.8-21 42.1-29.4 53.4-88.2 28.1-134.4-4.5-9-16-9.6-22.5-2l-25.2 29.3c-6.6 7.6-18.5 7.4-24.7-.5-17.3-22.1-49.1-62.4-65.3-83-5.4-6.9-15.2-8-21.5-1.9-18.3 17.8-51.5 56.8-51.5 104.3 0 68.6 50.6 109.2 113.7 109.2z"/></svg>
   
   <span class="md-ellipsis">
-    首頁
+    HomePage
     
   </span>
   
@@ -340,7 +275,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407 47c9.4-9.4 24.6-9.4 33.9 0l17.2 17.2c1.9-.1 3.9-.2 5.8-.2h32c11.2 0 21.9 2.3 31.6 6.5L543 55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-12.9 13c7.6 12.2 12 26.7 12 42.1 0 10.2 7.4 18.8 16.7 23 27.9 12.5 47.3 40.5 47.3 73 0 26.2-12.6 49.4-32 64v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-16h-64v16c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-17.6c-11.8-2.4-22.7-7.4-32-14.4-1.5-1.1-2.9-2.3-4.3-3.5-17-14.7-27.7-36.4-27.7-60.5 0-8.8-7.2-16-16-16s-16 7.2-16 16c0 44.7 26.2 83.2 64 101.2V352c0 17.7 14.3 32 32 32h32v64c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-76c-19.8 7.7-41.4 12-64 12s-44.2-4.3-64-12v76c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V329.1l-18.1 40.7c-5.4 12.1-19.6 17.6-31.7 12.2s-17.5-19.6-12.1-31.7L24 300.9c5.3-11.9 8-24.7 8-37.7C32 155.7 117.2 68 223.8 64.1l.2-.1h64c41.7 0 83.4 12.1 117.2 25.7 1.7-1.8 3.5-3.6 5.3-5.2L407 81c-9.4-9.4-9.4-24.6 0-33.9zm73 185a24 24 0 1 0-48 0 24 24 0 1 0 48 0m88 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48m-88-112a16 16 0 1 0-32 0 16 16 0 1 0 32 0m48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32"/></svg>
   
   <span class="md-ellipsis">
-    分佈式訓練叢集
+    Elastic Training Cluster
     
   </span>
   
@@ -357,7 +292,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            分佈式訓練叢集
+            Elastic Training Cluster
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -384,7 +319,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407 47c9.4-9.4 24.6-9.4 33.9 0l17.2 17.2c1.9-.1 3.9-.2 5.8-.2h32c11.2 0 21.9 2.3 31.6 6.5L543 55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-12.9 13c7.6 12.2 12 26.7 12 42.1 0 10.2 7.4 18.8 16.7 23 27.9 12.5 47.3 40.5 47.3 73 0 26.2-12.6 49.4-32 64v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-16h-64v16c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-17.6c-11.8-2.4-22.7-7.4-32-14.4-1.5-1.1-2.9-2.3-4.3-3.5-17-14.7-27.7-36.4-27.7-60.5 0-8.8-7.2-16-16-16s-16 7.2-16 16c0 44.7 26.2 83.2 64 101.2V352c0 17.7 14.3 32 32 32h32v64c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-76c-19.8 7.7-41.4 12-64 12s-44.2-4.3-64-12v76c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V329.1l-18.1 40.7c-5.4 12.1-19.6 17.6-31.7 12.2s-17.5-19.6-12.1-31.7L24 300.9c5.3-11.9 8-24.7 8-37.7C32 155.7 117.2 68 223.8 64.1l.2-.1h64c41.7 0 83.4 12.1 117.2 25.7 1.7-1.8 3.5-3.6 5.3-5.2L407 81c-9.4-9.4-9.4-24.6 0-33.9zm73 185a24 24 0 1 0-48 0 24 24 0 1 0 48 0m88 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48m-88-112a16 16 0 1 0-32 0 16 16 0 1 0 32 0m48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32"/></svg>
   
   <span class="md-ellipsis">
-    建立分佈式訓練叢集
+    Creating Elastic Training Clusters
     
   </span>
   
@@ -399,7 +334,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407 47c9.4-9.4 24.6-9.4 33.9 0l17.2 17.2c1.9-.1 3.9-.2 5.8-.2h32c11.2 0 21.9 2.3 31.6 6.5L543 55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-12.9 13c7.6 12.2 12 26.7 12 42.1 0 10.2 7.4 18.8 16.7 23 27.9 12.5 47.3 40.5 47.3 73 0 26.2-12.6 49.4-32 64v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-16h-64v16c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-17.6c-11.8-2.4-22.7-7.4-32-14.4-1.5-1.1-2.9-2.3-4.3-3.5-17-14.7-27.7-36.4-27.7-60.5 0-8.8-7.2-16-16-16s-16 7.2-16 16c0 44.7 26.2 83.2 64 101.2V352c0 17.7 14.3 32 32 32h32v64c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-76c-19.8 7.7-41.4 12-64 12s-44.2-4.3-64-12v76c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V329.1l-18.1 40.7c-5.4 12.1-19.6 17.6-31.7 12.2s-17.5-19.6-12.1-31.7L24 300.9c5.3-11.9 8-24.7 8-37.7C32 155.7 117.2 68 223.8 64.1l.2-.1h64c41.7 0 83.4 12.1 117.2 25.7 1.7-1.8 3.5-3.6 5.3-5.2L407 81c-9.4-9.4-9.4-24.6 0-33.9zm73 185a24 24 0 1 0-48 0 24 24 0 1 0 48 0m88 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48m-88-112a16 16 0 1 0-32 0 16 16 0 1 0 32 0m48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32"/></svg>
   
   <span class="md-ellipsis">
-    建立分佈式訓練叢集
+    Creating Elastic Training Clusters
     
   </span>
   
@@ -408,30 +343,30 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目錄">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目錄
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
-      前置確認事項
+      Before You Begin
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#create-container-clusters" class="md-nav__link">
     <span class="md-ellipsis">
-      建立容器叢集
+      Create Container Clusters
     </span>
   </a>
   
@@ -458,7 +393,7 @@
   
   
   <span class="md-ellipsis">
-    分佈式訓練叢集列表
+    Elastic Training Cluster List
     
   </span>
   
@@ -488,7 +423,7 @@
   
   
   <span class="md-ellipsis">
-    點看看
+    Click
     
   </span>
   
@@ -511,30 +446,30 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目錄">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目錄
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
-      前置確認事項
+      Before You Begin
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#create-container-clusters" class="md-nav__link">
     <span class="md-ellipsis">
-      建立容器叢集
+      Create Container Clusters
     </span>
   </a>
   
@@ -556,141 +491,141 @@
 
 
 
-  <h1>建立分佈式訓練叢集</h1>
+  <h1>Creating Elastic Training Clusters</h1>
 
-<p>開始建立分佈式訓練容器叢集前，須確認以下內容，若需進行相關設定，請洽管理者，相關設定請參考管理者操作手冊相關章節。</p>
-<h3 id="_1">前置確認事項<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Before creating an elastic training container cluster, ensure the following information. If relevant operations need to be taken, please consult your administrator. For relevant configurations, please refer to the relevant sections in the Administrator Manual.</p>
+<h3 id="before-you-begin">Before You Begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>確認專案內具備可用的 MLS 規格</p>
+<p>Ensure that your project has access to available MLS Spec</p>
 <ul>
-<li>規格內 <strong>不可</strong> 選擇共享模式的 GPU</li>
-<li>確認該規格可用於您的專案</li>
+<li>The specification must <strong>not</strong> include shared GPU mode</li>
+<li>Confirm the specification is available for your project</li>
 </ul>
 </li>
 <li>
-<p>確認公用鏡像列表中備有適合的鏡像</p>
+<p>Ensure that the Public Image List provides suitable images</p>
 <ul>
-<li>需有適合 DeepSpeed、Horovod 框架運行的鏡像</li>
-<li>若無適用鏡像，可先使用容器服務建立容器並自行安裝訓練框架後，建立自定義鏡像，建立叢集時選用</li>
+<li>Images compatible with DeepSpeed and Horovod frameworks are required</li>
+<li>If no suitable images are available, you can first use the container service to create a container, install the training framework yourself, and then create a custom image. Select the custom image with the training framework installed when creating the cluster.</li>
 </ul>
 </li>
 </ol>
 <div class="admonition warning">
-<p class="admonition-title">注意事項</p>
+<p class="admonition-title">Notice</p>
 <ol>
 <li>
-<p>單次創建的容器資源規格需保持一致，不同批次可配置不同規格，但建議同一叢集中的容器規格一致，以確保最佳性能與穩定性。</p>
+<p>Containers created in the same batch must maintain consistent resource specifications. Different batches can be configured with different specifications, but it is recommended to maintain consistent specifications within the same cluster to ensure optimal performance and stability.</p>
 </li>
 <li>
-<p>分佈式訓練適用的容器資源規格限制 GPU 以「片」為最小單位，不支援部署訓練容器於 GPU 共享模式節點中。</p>
+<p>GPU resources are allocated in whole units (per GPU) for elastic training. Deploying training containers on nodes with shared GPU configurations is not supported.</p>
 </li>
 </ol>
 </div>
-<h2 id="_2">建立容器叢集<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="create-container-clusters">Create Container Clusters<a class="headerlink" href="#create-container-clusters" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>進入建立叢集頁面</p>
+<p>Access the Create Cluster Page</p>
 <ul>
-<li>進入【容器管理】&gt;【分佈式訓練叢集】</li>
-<li>點按 <span class="keys"><kbd>建立叢集</kbd></span> 按鈕</li>
+<li>Go to 【Container Management】&gt;【Elastic Training Cluster】</li>
+<li>Click the <span class="keys"><kbd>Create a Cluster</kbd></span> button</li>
 </ul>
 </li>
 <li>
-<p><strong>基本設定</strong></p>
+<p><strong>Basic Settings</strong></p>
 <ul>
-<li>選擇要建立的 <strong>叢集類型</strong> ，目前支援 Horovod、DeepSpeed 框架</li>
-<li>輸入 <strong>叢集名稱</strong> </li>
-<li>輸入 <strong>描述</strong> （選填）</li>
-<li>設定 <strong>排程時間</strong> ：<ul>
-<li><strong>起始時間</strong> ：預設立即執行，亦可指定特定日期及時間</li>
-<li><strong>結束時間</strong> ：預設不指定結束時間，亦可指定結束日期、時間或指定結束時數</li>
+<li>Select <strong>Cluster Type</strong> to create. Horovod and DeepSpeed frameworks are currently supported.</li>
+<li>Enter <strong>Cluster Name</strong> . </li>
+<li>Enter <strong>Description</strong> (Optional).</li>
+<li>Set <strong>Schedule Time</strong> ：<ul>
+<li><strong>Start Time</strong> : The default setting is Execute Immediately. You can also specify the date and time.</li>
+<li><strong>End Time</strong> : The default setting is N/A. You can also specify the date and time or running hours.</li>
 </ul>
 </li>
-<li>點擊［下一步］進入資源配置階段</li>
-</ul>
-</li>
-<li>
-<p><strong>資源配置</strong></p>
-<ul>
-<li>
-<p>設定 <strong>容器數</strong> ：容器數量必須大於等於 2，包含一個 launcher 容器及其餘 worker 容器</p>
-<ul>
-<li>Launcher 容器：負責統一設定容器啟動參數，執行啟動指令及控制通訊流程</li>
-<li>Worker 容器：負責執行實際的訓練</li>
+<li>Click [Next] to configure Resources</li>
 </ul>
 </li>
 <li>
-<p>依照叢集類型選擇帶有訓練框架的 <strong>鏡像</strong></p>
-</li>
-<li>輸入要設定的 <strong>服務密碼</strong> （例：SSH）</li>
-<li><strong>啟用 GPU</strong>（預設開啟）</li>
+<p><strong>Resources</strong></p>
+<ul>
 <li>
-<p>依照訓練需求選擇 <strong>規格</strong> ，若規格選擇 Nvidia 的 GPU，請選擇 CUDA 版本</p>
+<p>Set <strong>Container Count</strong> : The number must be greater than or equal to 2, which includes a launcher container and one or more worker containers.</p>
+<ul>
+<li>Launcher container: Responsible for unified configuration of container startup parameters, executing launch commands and managing communication flow</li>
+<li>Worker container: Handles the actual training tasks</li>
+</ul>
+</li>
+<li>
+<p>Select an <strong>Image</strong> with the training framework based on the cluster type.</p>
+</li>
+<li>Configure the service <strong>password</strong> (e.g., SSH)</li>
+<li><strong>Enable GPU</strong> (active by default)</li>
+<li>
+<p>Select <strong>Specification</strong> based on your training needs. If you choose an Nvidia GPU, select CUDA Version</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>選擇規格後，最上方的額度會顯示目前所選規格所使用額度，可點按展開查看 GPU、vCPU、RAM 詳細使用資訊，包含當前使用量、額度上限與額度剩餘量</p>
+<p>After selecting a Specification, the Quota section at the top will display the quota usage of the selected specification. You can click to expand and view detailed GPU, vCPU, and RAM usage information, including current usage, quota limits, and remaining quota.</p>
 </div>
 </li>
 <li>
-<p>設定共享記憶體（預設開啟，建議設定至少 1 GB 容量）</p>
+<p>Set Shared Memory (active by default, recommended to set a minimum capacity of 1 GB)</p>
 </li>
-<li>點擊［下一步］進入儲存掛載設定</li>
+<li>Click [Next] to configure Storage</li>
 </ul>
 </li>
 <li>
-<p><strong>儲存掛載</strong></p>
+<p><strong>Storage</strong></p>
 <ul>
 <li>
-<p>Home 儲存掛載：</p>
+<p>Home storage:</p>
 <ul>
 <li>
-<p>設定掛載 <strong>home 儲存裝置</strong> ，選擇要掛載的裝置，若需要可啟用［預設為 Jupyter 工作目錄］選項</p>
+<p>Configure mounting of <strong>home storage</strong> device, select the device to mount. If needed, you can enable [Default as Jupyter Workspace]</p>
 </li>
 <li>
-<p>若需新增儲存裝置，請點按右方［+］或［新增儲存裝置］按鈕</p>
+<p>If a new storage device needs to be added, click the [+] button on the right or [Create Storage] button</p>
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Home 儲存掛載</p>
-<p>平台將使用者的 Home 目錄掛載至訓練環境中。掛載後，訓練過程中產生的資料、模型快取、個人化設定等檔案將儲存於此目錄。當需要查找訓練相關資料時，可至 Home 目錄中尋找。</p>
+<p class="admonition-title">Home Storage</p>
+<p>The platform mounts users' Home directories into the training environment. After mounting, files such as data generated during training, model cache, and personalized settings will be stored in this directory. When you need to find training-related data, you can search in the Home directory.</p>
 <div class="admonition warning">
-<p class="admonition-title">注意事項</p>
-</div>
+<p class="admonition-title">Notice</p>
 <ol>
-<li>請勿在 Home 目錄儲存大量短期無需保留的暫存檔案</li>
-<li>訓練叢集刪除後，此目錄下的檔案並不會自動刪除</li>
+<li>Do not store large amounts of temporary files that don't have to be retained in the Home directory.</li>
+<li>Files under this directory will not be automatically deleted when a training cluster is removed.</li>
 </ol>
 </div>
+</div>
 </li>
 <li>
-<p>內部儲存裝置掛載：</p>
+<p>Internal storage:</p>
 <ul>
 <li>
-<p>若需要，啟用 <strong>掛載內部儲存裝置</strong> </p>
+<p>If needed, enable mounting of <strong>internal storage</strong> .</p>
 </li>
 <li>
-<p>選擇要掛載的內部儲存裝置，設定掛載路徑</p>
+<p>Select the internal storage device to mount and configure the mounting path.</p>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>總覽</strong></p>
+<p><strong>Summary</strong></p>
 <ul>
 <li>
-<p>確認所有設定內容無誤，若需修改內容，點擊右上角編輯圖示回到該步驟進行編輯</p>
+<p>Confirm all configurations. If you need to modify configurations, click the edit icon in the upper right corner to go back and edit.</p>
 </li>
 <li>
-<p>點擊［送出］按鈕</p>
+<p>Click the [Submit] button</p>
 </li>
 </ul>
 </li>
 <li>
-<p>回到【分佈式訓練叢集】列表</p>
+<p>Eeturn to the 【Elastic Training Cluster】 page after submitting.</p>
 <ul>
-<li>待叢集狀態由「建立中」更新為「已建立」，分佈式訓練叢集即建立完成</li>
+<li>When the status of the container cluster changes from <code>Creating</code> to <code>Created</code>, the elastic training cluster has been created successfully.</li>
 </ul>
 </li>
 </ol>
@@ -720,7 +655,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到頂端
+  Back to top
 </button>
         
       </main>
@@ -753,7 +688,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
