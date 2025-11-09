@@ -38,6 +38,8 @@ Before creating an elastic training container cluster, ensure the following info
         - **End Time** : The default setting is N/A. You can also specify the date and time or running hours.
     - Click [Next] to configure Resources
 
+    ![Basic Settings](../../img/ethpc/01建立容器叢集-基本設定EN.png)
+
 3. **Resources**
     - Set **Container Count** : The number must be greater than or equal to 2, which includes a launcher container and one or more worker containers.
         - Launcher container: Responsible for unified configuration of container startup parameters, executing launch commands and managing communication flow
@@ -53,8 +55,14 @@ Before creating an elastic training container cluster, ensure the following info
 
             After selecting a Specification, the Quota section at the top will display the quota usage of the selected specification. You can click to expand and view detailed GPU, vCPU, and RAM usage information, including current usage, quota limits, and remaining quota.
 
+            ![額度](../../img/ethpc/04建立容器叢集-額度EN.png){:height="40%" width="40%"}
+
+
+
     - Set Shared Memory (active by default, recommended to set a minimum capacity of 1 GB)
     - Click [Next] to configure Storage
+
+    ![Resources](../../img/ethpc/02建立容器叢集-資源配置EN.png)
 
 4. **Storage**
     - Home storage:
@@ -66,7 +74,8 @@ Before creating an elastic training container cluster, ensure the following info
         !!! note "Home Storage"
              The platform mounts users' Home directories into the training environment. After mounting, files such as data generated during training, model cache, and personalized settings will be stored in this directory. When you need to find training-related data, you can search in the Home directory.
         
-            !!! warning "Notice"
+            !!! warning ""
+
                 1. Do not store large amounts of temporary files that don't have to be retained in the Home directory.
                 2. Files under this directory will not be automatically deleted when a training cluster is removed.
 
@@ -76,6 +85,8 @@ Before creating an elastic training container cluster, ensure the following info
 
         - Select the internal storage device to mount and configure the mounting path.
     
+    ![Storage](../../img/ethpc/06建立容器叢集-掛載home儲存EN.png)
+    
 5. **Summary**
     - Confirm all configurations. If you need to modify configurations, click the edit icon in the upper right corner to go back and edit.
 
@@ -84,3 +95,5 @@ Before creating an elastic training container cluster, ensure the following info
 6. Eeturn to the 【Elastic Training Cluster】 page after submitting.
 
     - When the status of the container cluster changes from `Creating` to `Created`, the elastic training cluster has been created successfully.
+
+    ![List](../../img/ethpc/09建立容器叢集-列表建立中EN.png)

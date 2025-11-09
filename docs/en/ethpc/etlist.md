@@ -1,6 +1,7 @@
 ## Cluster List
 
 The 【Elastic Training Cluster】 page lists created container clusters, including the following information:
+
 - Cluster type
 
 - Running status
@@ -10,6 +11,8 @@ The 【Elastic Training Cluster】 page lists created container clusters, includ
 - Worker container count (created/total)
 
 - Cluster start time
+
+![List](../../img/ethpc/01叢集列表未選擇EN.png)
 
 ## Cluster Details
 
@@ -89,6 +92,8 @@ In the 【Elastic Training Cluster】 page, follow these steps to quickly access
 2. Click the [Service] button to quickly access the service page for this container cluster
 
 ## Scale the Number of Containers
+
+![擴縮容器](../../img/ethpc/11叢集列表-選擴縮EN.png)
 
 ### Increase the Number of Containers
 

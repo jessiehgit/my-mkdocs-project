@@ -609,6 +609,7 @@
 </li>
 <li>點擊［下一步］進入資源配置階段</li>
 </ul>
+<p><img alt="基本設定" src="../../img/ethpc/01建立容器叢集-基本設定.png" /></p>
 </li>
 <li>
 <p><strong>資源配置</strong></p>
@@ -630,6 +631,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>選擇規格後，最上方的額度會顯示目前所選規格所使用額度，可點按展開查看 GPU、vCPU、RAM 詳細使用資訊，包含當前使用量、額度上限與額度剩餘量</p>
+<p><img alt="額度" height="40%" src="../../img/ethpc/04建立容器叢集-額度.png" width="40%" /></p>
 </div>
 </li>
 <li>
@@ -637,6 +639,7 @@
 </li>
 <li>點擊［下一步］進入儲存掛載設定</li>
 </ul>
+<p><img alt="資源配置" src="../../img/ethpc/02建立容器叢集-資源配置.png" /></p>
 </li>
 <li>
 <p><strong>儲存掛載</strong></p>
@@ -648,19 +651,18 @@
 <p>設定掛載 <strong>home 儲存裝置</strong> ，選擇要掛載的裝置，若需要可啟用［預設為 Jupyter 工作目錄］選項</p>
 </li>
 <li>
-<p>若需新增儲存裝置，請點按右方［+］或［新增儲存裝置］按鈕</p>
+<p>若需新增儲存裝置，請點按右方 <span class="keys"><kbd></kbd><span>+</span><kbd></kbd></span> 或 <span class="keys"><kbd>新增儲存裝置</kbd></span> 按鈕</p>
 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Home 儲存掛載</p>
 <p>平台將使用者的 Home 目錄掛載至訓練環境中。掛載後，訓練過程中產生的資料、模型快取、個人化設定等檔案將儲存於此目錄。當需要查找訓練相關資料時，可至 Home 目錄中尋找。</p>
 <div class="admonition warning">
-<p class="admonition-title">注意事項</p>
-</div>
 <ol>
 <li>請勿在 Home 目錄儲存大量短期無需保留的暫存檔案</li>
 <li>訓練叢集刪除後，此目錄下的檔案並不會自動刪除</li>
 </ol>
+</div>
 </div>
 </li>
 <li>
@@ -675,6 +677,7 @@
 </ul>
 </li>
 </ul>
+<p><img alt="儲存掛載" src="../../img/ethpc/06建立容器叢集-掛載home儲存.png" /></p>
 </li>
 <li>
 <p><strong>總覽</strong></p>
@@ -692,6 +695,7 @@
 <ul>
 <li>待叢集狀態由「建立中」更新為「已建立」，分佈式訓練叢集即建立完成</li>
 </ul>
+<p><img alt="列表" src="../../img/ethpc/09建立容器叢集-列表建立中.png" /></p>
 </li>
 </ol>
 

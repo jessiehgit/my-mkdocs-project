@@ -124,4 +124,5 @@ plugins:
       debug_html: true
   - mike:
      alias_type: redirect
+     deploy_prefix: zh-tw/
      version_selector: true
